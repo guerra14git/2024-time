@@ -8,12 +8,67 @@ html {
     font-weight: bold;
     font-size: 80px;
     color: white;
-    opacity: 0;
+    transition: opacity 0.5s ease;
+    animation: fadeIn 2s ease-in;
     transition: opacity 1s ease;
+    margin-top: 30vh;
+}
+#beer, #books, #musics, #countdown-m, #countdown-h {
+    font-family: "Exo 2", sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+    color: white;
+    opacity: 0;
 }
 .main-text-div {
-    display: flex;
-    justify-content: center;
+    display: grid;
     align-items: center;
-    height: 1000px;
+    justify-content: center;
+    width: 100vw;
 }
+.dash {
+  font-family: "Exo 2", sans-serif;
+  color: white;
+  font-size: 70px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: -50px;
+  opacity: 0;
+  animation: fadeInOut 2.3s ease-in-out infinite;
+  cursor: pointer;
+}
+.dash b {font-size: 18px;}
+.dash_ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -40px;
+}
+.toggle1 {
+  transform: rotate(30deg);
+  margin-right: -15px;
+}
+.toggle2 {
+  transform: rotate(-30deg);
+  margin-left: -15px;
+}
+/* ############## -- KEYFRAMES -- ##############*/
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+  }
+@keyframes fadeInOut {
+  0% {opacity: 0.3;}
+  50% {opacity: 0.9;}
+  100% {opacity: 0.3;}
+}
+.container {
+    height: 10000px;
+}
+@media screen and (max-width: 767px) {
+  #countdown, #beer, #books, #musics, #countdown-m, #countdown-h {
+    font-size: 25px;
+  }
+}
+
